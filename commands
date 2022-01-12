@@ -55,3 +55,34 @@ I believe that the error message is self-explanatory. Your configuration file ha
 trainer_params:
 gpus: [0]
 
+
+
+(base) [xid40@login0 ~]$ crc-interactive.py --help
+ crc-interactive.py -- An interactive Slurm helper
+Usage:
+    crc-interactive.py (-s | -g | -m | -i | -d) [-hvzo] [-t <time>] [-n <num-nodes>]
+        [-p <partition>] [-c <num-cores>] [-u <num-gpus>] [-r <res-name>]
+        [-b <memory>] [-a <account>] [-l <license>] [-f <feature>]
+
+Positional Arguments:
+    -s --smp                        Interactive job on smp cluster
+    -g --gpu                        Interactive job on gpu cluster
+    -m --mpi                        Interactive job on mpi cluster
+    -i --invest                     Interactive job on invest cluster
+    -d --htc                        Interactive job on htc cluster
+Options:
+    -h --help                       Print this screen and exit
+    -v --version                    Print the version of crc-interactive.py
+    -t --time <time>                Run time in hours, 1 <= time <= 12 [default: 1]
+    -n --num-nodes <num-nodes>      Number of nodes [default: 1]
+    -p --partition <partition>      Specify non-default partition
+    -c --num-cores <num-cores>      Number of cores per node [default: 1]
+    -u --num-gpus <num-gpus>        Used with -g only, number of GPUs [default: 0]
+    -r --reservation <res-name>     Specify a reservation name
+    -b --mem <memory>               Memory in GB
+    -a --account <account>          Specify a non-default account
+    -l --license <license>          Specify a license
+    -f --feature <feature>          Specify a feature, e.g. `ti` for GPUs
+    -z --print-command              Simply print the command to be run
+    -o --openmp                     Run using OpenMP style submission
+
