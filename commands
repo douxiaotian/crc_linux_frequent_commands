@@ -33,7 +33,6 @@ srun: job 241445 has been allocated resources
 
 
 
-
 when I try to run the following code: (base) [xid40@gpu-stage06 PyTorch-VAE]$ python run.py -c configs/vae.yaml
 
 I got the following error, it looks like I did not get GPU allocated, although I am in GPU mode
@@ -86,3 +85,4 @@ Options:
     -z --print-command              Simply print the command to be run
     -o --openmp                     Run using OpenMP style submission
 
+https://slurm.schedmd.com/gres.html
