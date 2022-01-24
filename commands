@@ -101,3 +101,63 @@ ln -s FILE LINK
 
 
 
+FANGPING has updated the ticket 'docker installation':
+https://crc.pitt.edu/node/10052#comment-26998
+State:active
+Priority:normal
+
+Update text:
+------------------------------
+
+I don't find any problems to pull the docker image.
+
+/ihome/crc/install/clairvoyance/clv.img
+
+[fangping@login0b clairvoyance]$ module load singularity/3.8.3
+[fangping@login0b clairvoyance]$ singularity pull --name clv.img docker://clairvoyancedocker/clv:latest
+INFO: Converting OCI blobs to SIF format
+INFO: Starting build...
+Getting image source signatures
+Copying blob 852e50cd189d skipped: already exists
+Copying blob a6236801494d skipped: already exists
+Copying blob 679c171d6942 skipped: already exists
+Copying blob 4190bee14d68 done
+Copying blob c11cf53cfc5c done
+Copying blob dcd81d4244a6 done
+Copying blob b22f769c41ee done
+Copying blob 40f1339bbf34 done
+Copying config 678966665f done
+Writing manifest to image destination
+Storing signatures
+2022/01/24 10:12:42 info unpack layer: sha256:852e50cd189dfeb54d97680d9fa6bed21a6d7d18cfb56d6abfe2de9d7f173795
+2022/01/24 10:12:43 info unpack layer: sha256:a6236801494d5ca9acfae6569427398c2942c031375b96cac887cafe1de5a09b
+2022/01/24 10:12:46 info unpack layer: sha256:679c171d6942954a759f2d3a1dff911321940f23b0cdbe1d186f36bef0025124
+2022/01/24 10:12:48 info unpack layer: sha256:4190bee14d68763bef0a7e007a8471f6bf5454c2e233cb9b1cee04fcf11bfb6b
+2022/01/24 10:12:48 info unpack layer: sha256:c11cf53cfc5c93457c565ae46cb75ce000e77e2d22ff6dfdba44e2d85d7dda60
+2022/01/24 10:12:48 info unpack layer: sha256:dcd81d4244a689d0556750c35796830880e33b1eb1839ee283abceffb31902c8
+2022/01/24 10:12:48 info unpack layer: sha256:b22f769c41eed33ce881c20c5be3e8d69a9993b6d0a4c1163354aafed77852e8
+2022/01/24 10:14:42 info unpack layer: sha256:40f1339bbf3493083f2fe339c4e8b1bb48e63ff75374de67063fbc720ff88a4a
+INFO: Creating SIF file...
+[fangping@login0b clairvoyance]$
+
+
+FANGPING has updated the ticket 'space full again':
+https://crc.pitt.edu/node/10053#comment-26996
+State:active
+Priority:normal
+
+Update text:
+------------------------------
+
+You can install your own miniconda3 to /ihome/yufeihuang/xid40/xid40, which is the soft link to /ix folder. /ihome/yufeihuang/xid40/miniconda3 is ~55GB.
+
+You can also generate conda envs using your /ix folder.
+
+conda create --prefix=/ihome/yufeihuang/xid40/xid40/myenv python=3.7
+source activate /ihome/yufeihuang/xid40/xid40/myenv
+
+/ihome/yufeihuang/xid40/miniconda3/envs is ~36 GB.
+
+
+
+
